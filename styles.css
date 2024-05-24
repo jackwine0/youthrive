@@ -1,0 +1,363 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: width 0.5s; /* Added transition for smoother effect */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ccc;
+    display: block;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #fff; /* Change color to white on hover */
+    background-color: #555; /* Add background color on hover */
+}
+
+/* Active link style */
+.sidenav a.active {
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+/* Style page content */
+.main {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s; /* Added transition for smoother effect */
+}
+
+/* Logo style */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logo image style */
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Sidebar toggle button */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 220px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Sidebar toggle button icon */
+.toggle-btn i {
+    transition: transform 0.3s; /* Added transition for smoother effect */
+}
+
+/* Sidebar open class for toggle button */
+.sidebar-open .toggle-btn i {
+    transform: rotate(180deg); /* Rotate icon when sidebar is open */
+}
+
+  
+.dropdown-content {
+    display: none;
+    background-color: #34495e;
+    padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+header {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add margin for spacing */
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.header-icons i {
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.content-section {
+    margin-top: 20px;
+}
+
+.employee-filters,
+.roles-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.employee-filters input,
+.roles-filters input,
+.employee-filters select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.employee-table-container {
+    margin-top: 20px;
+}
+
+.employee-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee-table-container th,
+.employee-table-container td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.assign-roles {
+    margin-top: 20px;
+}
+
+.assign-roles-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.assign-roles-list th,
+.assign-roles-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.role-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.role-category {
+    width: 23%;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.role-category h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.role-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.role-category ul li {
+    margin: 10px 0;
+}
+
+.role-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.role-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* General styles */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.roles-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.roles-container button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.roles-container button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.role-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.role-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

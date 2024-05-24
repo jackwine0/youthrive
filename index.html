@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidenav">
+            <ul>
+                <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="roles.html"><i class="fas fa-user-tag"></i> Roles</a></li>
+                <li class="dropdown">
+                    <a href="#employees"><i class="fas fa-users"></i> Employees</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html" onclick="filterEmployees('all')">All Employees</a></li>
+                        <li><a href="#" onclick="filterEmployees('recent')">Recent Hires</a></li>
+                    </ul>
+                </li>
+                <li><a href="#payroll"><i class="fas fa-money-check-alt"></i> Payroll</a></li>
+                <li><a href="#reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-icons">
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-bell"></i>
+                    <div class="profile-pic">
+                        <img src="./MAIN FIELD.gif" alt="Profile Picture">
+                    </div>
+                </div>
+            </header>
+            <section id="employees" class="content-section">
+                <h1>Employees</h1>
+                <div class="employee-filters">
+                    <input type="text" id="employeeName" placeholder="Search by Name">
+                    <input type="text" id="employeeID" placeholder="Search by ID">
+                    <select id="employeeRole">
+                        <option value="">Select Role</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                    </select>
+                    <select id="employeeStatus">
+                        <option value="">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                    <select id="employeeTeam">
+                        <option value="">Select Team</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="product">Product</option>
+                    </select>
+                    <button onclick="searchEmployees()">Search</button>
+                </div>
+                <div class="employee-table-container">
+                    <table id="employeeTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Team</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Employee rows will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button onclick="prevPage()">Previous</button>
+                    <button onclick="nextPage()">Next</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

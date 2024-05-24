@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <nav class="sidenav">
+            <ul>
+                <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="roles.html"><i class="fas fa-user-tag"></i> Roles</a></li>
+                <li class="dropdown">
+                    <a href="#employees"><i class="fas fa-users"></i> Employees</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html" onclick="filterEmployees('all')">All Employees</a></li>
+                        <li><a href="#" onclick="filterEmployees('recent')">Recent Hires</a></li>
+                    </ul>
+                </li>
+                <li><a href="#payroll"><i class="fas fa-money-check-alt"></i> Payroll</a></li>
+                <li><a href="#reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-icons">
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-bell"></i>
+                    <div class="profile-pic">
+                        <img src="./MAIN FIELD.gif" alt="Profile Picture">
+                    </div>
+                </div>
+            </header>
+            <section id="roles" class="content-section">
+                <h1>Roles</h1>
+                <div class="roles-container">
+                    <button class="active">All</button>
+                    <button>Product</button>
+                    <button>Engineering</button>
+                    <button>Marketing</button>
+                </div>
+                <div class="roles-grid">
+                    <div class="role-item">
+                        <h2>Sales Strategist</h2>
+                        <p>Brief description of Sales Strategist role.</p>
+                    </div>
+                    <div class="role-item">
+                        <h2>Marketing Executive</h2>
+                        <p>Brief description of Marketing Executive role.</p>
+                    </div>
+                    <div class="role-item">
+                        <h2>UI/UX Designer</h2>
+                        <p>Brief description of UI/UX Designer role.</p>
+                    </div>
+                    <div class="role-item">
+                        <h2>Web Developer</h2>
+                        <p>Brief description of Web Developer role.</p>
+                    </div>
+                    <!-- Add more role items as needed -->
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
